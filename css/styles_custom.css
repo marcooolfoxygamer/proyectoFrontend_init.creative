@@ -1,0 +1,1116 @@
+/* importación fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@500&family=Quicksand&display=swap');
+
+/* Aplicación de las fuentes al texto */
+*{
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+h1,h2,h3,h4{
+    font-family: "Noto Sans Georgian", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+}
+
+
+/* Color de la barra de navegación */
+#mainNav {
+    /* background-color: #063142; */
+    background-color: #155d60;
+}
+
+
+/* Estilos aplicados al contenido cuando mida de ancho igual o más de 992px  */
+@media (min-width: 992px) {
+    #mainNav {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        border: none;
+        background-color: #063142a9;
+        /* background-color: #155d60a9; */
+        transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+    }
+    #mainNav.navbar-shrink {
+        /* background-color: #063142; */
+        background-color: #155d60;
+    }
+    #mainNav .navbar-brand img {
+        height: 2rem;
+    }
+    #mainNav.navbar-shrink .navbar-brand svg, #mainNav.navbar-shrink .navbar-brand img {
+        height: 2rem;
+    }
+    #mainNav .container{
+        display: flex;
+        margin: 0 calc(10% - 90px) 0 calc(12% - 50px);
+    }
+    .navbar-expand-lg {
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+    }
+    .navbar-expand-lg .navbar-collapse {
+        justify-content: end;
+    }
+    .navbar-expand-lg .navbar-nav {
+        margin: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .contacto{
+        margin-left: calc(12% - 80px);
+    }
+    #inicio .col-lg-4{
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    .cont-left-libro{
+        width: 624px;
+        /* max-width: 50%; */
+    }
+    .cont-left-libro img{
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+    }
+    .cont-right-libro{
+        width: 50%;
+        max-width: 50%;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .cont-left-historia{
+        flex-basis: 22%;
+    }
+    .cont-text-historia{
+        width: auto;
+        max-width: 390px;
+        min-width: 200px;
+    }
+    .cont-right-historia{
+        flex-basis: 60%;
+    }
+    .cont-text-historia .text-muted{
+        line-height: 1.2;
+    }
+
+}
+
+
+/* Estilos aplicados a la barra de navegación */
+/* Estilos cada opción */
+#mainNav .navbar-nav .nav-item .nav-link {
+    line-height: normal;
+    transition: 0.5s ease all;
+}
+/* Estilos opción considerada (hover) y seleccionada */
+#mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
+    color: #fff;
+    background-color: rgba(129, 129, 129, 0.643);
+    line-height: normal;
+    transition: 0.5s ease all;
+}
+/* Estilos logo */
+#mainNav .navbar-brand img {
+    height: 2rem;
+}
+.cont-nav-logo{
+    padding: 0;
+}
+#nav-logo{
+    width: max-content;
+}
+/* Estilos opción "Contactanos" */
+#opcion_contactanos{
+    padding: 4px 9px;
+}
+
+
+/* Estilos headers */
+/* Estilo cabecera principal */
+header.masthead {
+    height: 24.8rem;
+    padding: 0;
+}
+/* Estilos contenedores */
+header.masthead .container{
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    align-content: end;
+    margin-right: calc(20% - 150px);
+}
+/* Estilos titulo y subtitlo principales */
+header.masthead .masthead-heading {
+    line-height: 1;
+    margin-bottom: 15px;
+    animation: mover-derecha-izquierda 4s 1;
+}
+header.masthead .masthead-subheading {
+    line-height: 1;
+    animation: mover-derecha-izquierda 4s 1;
+}
+
+/* Creación de las animaciones para los textos */
+@keyframes mover-izquierda-derecha {
+    from{
+        transform: translateX(-30px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+@keyframes mover-derecha-izquierda {
+    from{
+        transform: translateX(30px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+@keyframes mover-arriba-abajo {
+    from{
+        transform: translateY(30px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+/* Aplicación de las animaciones a los textos */
+#inicio .col-md-4:nth-child(1){
+    animation: mover-izquierda-derecha 5s 1;
+    /* animation-fill-mode: forwards; */
+}
+#inicio .col-md-4:nth-child(2){
+    animation: mover-arriba-abajo 5s 1;
+    /* animation-fill-mode: forwards; */
+}
+#inicio .col-md-4:nth-child(3){
+    /* transition: 0.4s ease all; */
+    /* animation-delay: 0.9s; */
+    animation: mover-derecha-izquierda 5s 1;
+    /* animation-fill-mode: forwards; */
+}
+/* Creación de configuración para que no salgan barras al ser ejecutadas las animaciones */
+#inicio .row{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+/* Estilos aplicados al contenido cuando mida de ancho igual o más de 768px  */
+@media (min-width: 768px) {
+    header.masthead {
+        height: 39.6rem;
+        padding: 0;
+    }
+    .col-inicial, .col-final {
+        margin-top: 70px;
+    }
+    #inicio .col-md-4 p{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    header.masthead .masthead-heading {
+        font-size: calc(10rem + 0.5vw);
+        line-height: 1;
+        margin-bottom: 15px;
+    }
+    header.masthead .masthead-subheading {
+        font-size: calc(3rem + 0.5vw);
+        line-height: 1;
+    }
+    .cont-img-logo-nosotros{
+        width: 180px;
+    }
+
+}
+
+
+/* Estilos aplicados a la sección "Inicio" y "Nosotros" */
+/* Estilos aplicados a la sección general */
+.page-section#inicio {
+    padding-bottom: 3rem;
+}
+#inicio .text-muted{
+    font-size: 19px;
+}
+/* Estilos aplicados a las imágenes de "Nuestros valores" */
+#cont-img-nosotros{
+    width: 100px;
+    margin: 0 auto 40px auto;
+}
+#cont-img-nosotros img{
+    width: 100%;
+}
+/* Estilos aplicados a la división "Integrantes" */
+.head-integrantes{
+    margin-top: 20px;
+}
+/* Estilos aplicados a las imágenes de "Integrantes" */
+.cont-img-text-integrantes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cont-img-text-integrantes .btn{
+    padding: 7.55px 2px;
+}
+.cont-img-text-integrantes .svg-inline--fa {
+    height:23px;
+}
+/* Estilos aplicados al texto de "Geraldine" para que no salga del recuadro */
+#inicio .geraldine{
+    font-size: 17px;
+}
+/* Estilos aplicados al logo mostrado al final de la sección */
+.cont-img-logo-nosotros{
+    width: 180px;
+    margin-top: 40px;
+}
+.img-logo-nosotros{
+    width: 100%;
+}
+
+
+/* Estilos aplicados a la sección "Libro" */
+/* Estilo aplicado de forma general a cada contenedor de los dos que hay en la sección */
+#libro .row{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+/* Estilo aplicado a los dos contenedores principales dentro del primer contenedor de la sección */
+.cont-left-libro, .cont-right-libro{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+/* Estilos aplicados al contenedor izquierdo */
+.cont-left-libro{
+    height: 809px;
+    width: 624px;
+}
+/* Estilos aplicados al carrusel */
+.cont-left-libro .carousel-inner{
+    height: 100%;
+}
+.carousel {
+    height: 100%;
+}
+/* Estilos aplicados a cada contenedor de las imágenes del carrusel */
+.cont-left-libro .carousel-item{
+    height:100%;
+}
+/* Estilos aplicados a cada imagen del carrusel */
+.cont-left-libro img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+@media (min-width: 992px) {
+    #libro .cont-left-libro img{
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+    .emprendimiento #libro .cont-right-libro #text-yedith{
+        padding-top: 60px;
+    }
+}
+
+/* Estilos aplicados al contenedor derecho */
+/* Estilo aplicado de forma general */
+.cont-right-libro{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+/* Estilos aplicados a la imagen superior del contenedor */
+.cont-img-superior-cont-right-libro{
+    height: 100px;
+    width: 100%;
+}
+.cont-img-superior-cont-right-libro img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+/* Estilos aplicados al texto del contenedor */
+/* Estilos aplicados al cpntenedor general de los textos */
+.cont-text-right-libro{
+    display: flex;
+    flex-flow: row nowrap;
+}
+/* Estilos aplicados al contenedor de los textos header y/o principales */
+.text-title-libro{
+    height: 610px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    text-align: left;
+    transform: rotate(180deg);
+}
+/* Estilos aplicados al título */
+#libro.page-section h2.section-heading {
+    font-size: 72px;
+    font-weight: 600;
+    margin: 0;
+}
+/* Estilos aplicados al subtítulo */
+#libro.page-section .section-subheading{
+    font-size: 30px;
+    font-style: normal;
+}
+/* Estilos aplicados al contenedor general de los textos a la derecha de los textos principales */
+.cont-sup-text-adic-right-libro{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    padding: 3%;
+}
+/* Estilos aplicados al contenedor de cada grupo de texto dentro del contenedor (tanto de los textos específicos de la primera división y contenedor de la sección, así como de la segunda) */
+.cont-text-adic-right-libro{
+    text-align: center;
+}
+/* Estilos aplicados a los textos dentro del contenedor */
+.cont-text-adic-right-libro .text-muted{
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+/* Estilos aplicados al contenido cuando mida de ancho igual o más de 1400px  */
+@media (max-width: 1400px) {
+    .cont-text-adic-right-libro .text-muted{
+        font-size: 14px;
+        line-height: 1.3;
+    }
+    .cont-left-libro{
+        height: 929px;
+        /* width: 444px; */
+    }
+    .text-title-libro{
+        height: 770px;
+        /* writing-mode: vertical-rl;
+        text-orientation: mixed;
+        text-align: left;
+        transform: rotate(180deg); */
+    }
+}
+/* Estilos aplicados al contenido cuando mida de ancho igual o más de 992px  */
+@media (max-width: 992px) {
+    .cont-text-adic-right-libro .text-muted{
+        font-size: 17px;
+        line-height: 1.3;
+    }
+}
+
+
+/* Estilos aplicados a la sección "Historia" */
+#historia.page-section{
+    padding-top: 0;
+    padding-bottom: 8rem;
+}
+#historia .cont-titulo-historia{
+    position: relative;
+    top: 80%;
+    width: 580px;
+}
+#historia .cont-titulo-historia h2{
+    font-size: 102px;
+    color: #000000;
+    font-weight: 600;
+    width: auto;
+    padding-top: 50px;
+}
+#historia #cont-historia1 .row{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    /* background-color: #063142; */
+    background-color: #155d60;
+}
+/* Estilo aplicado al primer contenedor principal dentro del segundo contenedor de la sección */
+.cont-left-historia{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 80%;
+    height: auto;
+    min-height: auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+/* Estilo aplicado al título del texto */
+.cont-left-historia .my-3{
+    margin-bottom: 40px !important;
+}
+/* Estilos aplicados al contenedor de cada grupo de texto dentro del contenedor (tanto de los textos específicos de la primera división y contenedor de la sección, así como de la segunda) */
+.cont-text-historia{
+    text-align: center;
+}
+/* Estilos aplicados a los textos dentro del contenedor */
+.cont-text-historia .text-muted{
+    font-size: 12px;
+    line-height: 1.4;
+}
+#historia .cont-text-historia .text-muted{
+    color: #fff !important;
+}
+#historia .cont-text-historia h4{
+    color: #fff;
+}
+
+/* Estilo aplicado al segundo contenedor principal dentro del segundo contenedor de la sección */
+.cont-right-historia{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    padding: 0;
+}
+/* Estilos aplicados al contenedor de la imagen */
+.cont-img-cont-right-historia{
+    width: 100%;
+    height: 100%;
+}
+/* Estilos aplicados a la imagen */
+.cont-img-cont-right-historia img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Estilos adicionales para configurar muestra correcta de los elementos de la sección en dimensiones de pantalla mayores a 992px */
+@media (min-width: 992px) {
+    #historia .container#cont-historia1{
+        height: 1190px;
+    }
+    #historia .cont-titulo-historia{
+        position: relative;
+        top: 80%;
+        left: 15%;
+    }
+    .cont-left-historia{
+        padding-left: 2%;
+        padding-right: 2%;
+        justify-content:start;
+
+        /* background-color: #063142; */
+        background-color: #155d60;
+    }
+    #historia #cont-historia1 .row{
+        height: 990px;
+        background-color: #fff;
+    }
+    .cont-right-historia{
+        height: 100%;
+    }
+    #historia .cont-titulo-historia h2{
+        color: #fff;
+        padding-top: 0;
+    }
+    .cont-text-historia .text-muted{
+        font-size: 15px;
+    }
+}
+
+/* Estilos aplicados al contenido cuando mida de ancho igual o más de 1400px  */
+@media (max-width: 1400px) {
+    #historia .cont-titulo-historia{
+        position: relative;
+        top: 82%;
+    }
+    .cont-text-historia .text-muted{
+        font-size: 14px;
+    }
+}
+/* Estilos aplicados al contenido cuando mida de ancho igual o más de 992px  */
+@media (max-width: 992px) {
+    .cont-text-historia .text-muted{
+        font-size: 16px;
+    }
+}
+
+/* Estilos aplicados al video mostrado dentro de la sección de historia */
+/* Estilos aplicados al contenedor general */
+#cont-historia2 .row#row-video{
+    width: 100%;
+    height: 100%;
+    display:block;
+    margin-left: calc(9% - 30px);
+}
+/* Estilos aplicados a los contenedores específicos del video */
+.container#cont-historia2 .cont-video{
+    height: 500px;
+    width: 100%;
+    /* margin: 0 auto; */
+}
+/* Estilos aplicados al video */
+.container#cont-historia2 .cont-video video{
+    width: 85%;
+    height: 100%;
+}
+/* Estilos aplicados al contenedor del texto debajo del video */
+#cont-historia2 #row-texto-historia2{
+    width: fit-content;
+    margin: 40px auto 0 auto;
+}
+/* Estilos aplicados al texto debajo del video */
+#cont-historia2 .text-muted{
+    font-size: 19px;
+    margin-bottom: 2px;
+}
+/* Estilos para la creación de la linea ubicada debajo del texto */
+#cont-historia2 p:last-of-type{
+    border-bottom: 1px solid #6f6f6f;
+    width: calc(100% - 50px);
+    margin: 0 auto;
+}
+
+
+/* Estilos aplicados a la sección "Emprendimientos" */
+/* Estilos aplicados al título principal */
+#emprendimientos .section-heading{
+    margin-bottom:6rem;
+    font-size: 72px;
+}
+/* Estilos aplicados al contenedor general que contendrá las imágenes a mostrar */
+.cont-emprendimientos{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+/* Estilos aplicados al contenedor de cada imagen */
+.cont-img-emprendimientos{
+    width: 15rem;
+    height: 40rem;
+    padding: 10px 0;
+}
+.cont-ref-img-emprendimientos{
+    width: 100%;
+    height: 100%;
+}
+/* Estilos aplicados a cada imagen */
+.cont-img-emprendimientos img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.7s ease;
+}
+/* Estilos aplicados para generar el cambio de color en las imágenes de los emprendimientos */
+.cont-img-emprendimientos:nth-child(1):hover img{
+    filter: grayscale(100%) brightness(90%) sepia(100%) hue-rotate(1deg);
+}
+.cont-img-emprendimientos:nth-child(2):hover img{
+    filter: grayscale(100%) brightness(90%) sepia(100%) hue-rotate(310deg);
+}
+.cont-img-emprendimientos:nth-child(3):hover img{
+    filter: grayscale(100%) brightness(80%) sepia(100%) hue-rotate(705deg);
+}
+.cont-img-emprendimientos:nth-child(4):hover img{
+    filter: grayscale(100%) brightness(90%) sepia(100%) hue-rotate(150deg);
+}
+.cont-img-emprendimientos:nth-child(5):hover img{
+    filter: grayscale(100%) brightness(90%) sepia(100%) hue-rotate(220deg);
+}
+
+
+/* Estilos aplicados a la sección "Contactanos" */
+/* Estilos aplicados al título principal */
+#contactanos .section-heading{
+    margin-bottom: 4rem;
+    font-size: 60px;
+}
+/* Estilos aplicados al contenedor general de "Contactanos" */
+.cont-contactanos {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+/* Estilos aplicados al subcontenedor de "Contactanos", el izquierdo */
+.cont-left-contactanos {
+    width: 70%;
+    height: auto;
+    min-height: 600px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    padding: 30px;
+    margin-bottom: 70px;
+}
+/* Estilos aplicados al texto general del subcontenedor izquierdo */
+.cont-left-contactanos .text-center{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+}
+/* Estilos aplicados al subtítulo "Siguenos en" */
+.cont-left-contactanos h4{
+    font-size: 35px;
+}
+/* Estilos aplicados al subcontenedor del subcontenedor izquierdo */
+.cont-left-contactanos .cont-left-contacto{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+/* Estilos aplicados al logo dentro del subcontenedor izquierdo de "Contactanos" */
+.cont-left-contactanos .cont-left-logo-contactanos{
+    width: 100%;
+    height: 100%;
+    /* flex: 1; */
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    align-content: center;
+}
+/* Estilos aplicados a subcontenedor izquierdo con las redes sociales del libro */
+.cont-left-elementos-contacto{
+    width: auto;
+    height: 80px;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+}
+/* Estilos aplicados a contenedores de imágenes de las redes sociales del libro */
+.cont-left-elementos-contacto .cont-left-img-contactanos{
+    width: 80px;
+    height: 80px;
+    /* margin-right: 40px; */
+    margin: auto 20px auto 0;
+}
+/* Estilos aplicados a las imágenes de las redes sociales del libro */
+.cont-left-elementos-contacto .left-img-contactanos{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Estilos aplicados a los contenedores del texto de las redes sociales */
+.cont-left-text-contactanos{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+/* Estilos aplicados a los textos de las redes sociales */
+.cont-left-text-contactanos .text-muted{
+    margin: 0;
+    font-size: 15px;
+    padding: 30px 0;
+}
+/* Estilos aplicados al contenedor de la imagen del logo mostrado en la sección (Contactanos) */
+.cont-left-img-logo-contactanos{
+    width: 180px;
+    margin: 0 auto;
+}
+/* Estilos aplicados a la imagen del logo mostrado en la sección */
+.left-img-logo-contactanos{
+    width: 100%;
+}
+/* Estilos aplicados al contenedor del texto debajo del logo mostrado en la sección */
+.cont-left-logo-contactanos .text-muted{
+    font-size: 12px;
+    margin-top: 12px;
+}
+/* Estilos aplicados al texto debajo del logo mostrado en la sección */
+.cont-left-logo-contactanos .text-muted p{
+    color: #000000;
+}
+/* Estilos aplicados al contenedor de la derecha de la sección */
+.cont-right-contactanos{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 60px 40px 40px 40px;
+    /* background-color: #0a597896; */
+    background-color: #0a786896;
+}
+/* Estilos aplicados al contenedor de cada uno de los campos mostrados a los usuarios para llenar */
+.cont-right-contactanos .form-group{
+    margin-bottom: 40px;
+}
+/* Estilos aplicados a los label o textos descriptivos de cada uno de los campos mostrados a los usuarios para llenar */
+.cont-right-contactanos label{
+    padding-bottom: 15px;
+    color: #fff;
+    font-size: 20px;
+}
+/* Estilos aplicados a los campos mostrados a los usuarios para llenar */
+.cont-right-contactanos .form-control{
+    border:none;
+    border-bottom: 1px solid #fff;
+    border-radius: 0;
+    background-color: #ffffff00;
+    color: #fff;
+}
+/* Configuraciones para que en el campo en donde toca poner el teléfono, no salga al final una barra para aumentar o disminuir el número */
+.cont-right-contactanos input[type=number]::-webkit-inner-spin-button,
+.cont-right-contactanos input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Estilos aplicados al label o texto descriptivo del campo "mensaje" en el formulario de contacto */
+.cont-right-contactanos .label-mensaje{
+    padding-bottom: 22px;
+}
+/* Estilos aplicados al campo "mensaje" que le corresponde llenar a los usuarios */
+.cont-right-contactanos #inputMensaje{
+    background-color: #ffffff57;
+    border-radius: 0 10px 0 10px;
+}
+/* Estilos aplicados al texto placeholder dentro del campo "mensaje" */
+#inputMensaje::placeholder {
+    color: #fff;
+    opacity: 0.7;
+}
+
+/* Estilos aplicados al botón "Enviar" del formulario */
+.cont-right-contactanos .btn{
+    font-size: 25px;
+    margin-top: 30px;
+    width: 80%;
+    height: 70px;
+    background-color: #155d60;
+    border-color: #155d60;
+    color: #fff;
+
+    transition: 0.4s ease all;
+}
+/* Estilos aplicados al pasar el mouse encima del botón "Enviar" del formulario */
+.cont-right-contactanos .btn:hover{
+    /* background-color: #063142; */
+    background-color: #ffffffaa;
+    border-color: #dfdfdf91;
+    /* border-color: #063142; */
+    color: #155d60;
+    transition: 0.4s ease all;
+}
+/* Estilos adicionales para configurar muestra correcta de los elementos de los contenedores de la sección en dimensiones de pantalla mayores a 992px */
+@media (min-width: 992px) {
+    .cont-left-contactanos {
+        width: 50%;
+        max-width: 50%;
+        min-height: 700px;
+        margin-bottom: 0;
+    }
+    .cont-left-text-contactanos .text-muted{
+        font-size: 18px;
+    }
+    .cont-right-contactanos {
+        width: 50%;
+        max-width: 50%;
+    }
+}
+
+
+/* Estilos aplicados al footer de las paginas */
+.footer{
+    background-color: #155d60;
+}
+/* Estilos aplicados al contenedor general del footer */
+.cont-footer{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: center;
+}
+/* Estilos aplicados al contenedor izquierdo del footer */
+.cont-left-footer{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+/* Estilos aplicados a los textos del footer */
+.cont-left-footer p, .cont-right-footer p{
+    color: white;
+}
+/* Estilo aplicado al último texto del contenedor izquierdo del footer para que no tenga margen inferior y se vea centrado */
+.cont-left-footer p:last-of-type{
+    margin-bottom: 0;
+}
+/* Estilos aplicados al contenedor derecho del footer */
+.cont-right-footer{
+    width: 70%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin: 20px 0 10px 0;
+}
+/* Estilo aplicado al último texto del contenedor derecho del footer para que no tenga margen inferior y se vea centrado */
+.cont-right-footer p:last-of-type{
+    margin-bottom: 0;
+}
+/* Estilos adicionales para configurar muestra correcta de los elementos de la sección en dimensiones de pantalla mayores a 992px */
+@media (min-width: 992px) {
+    .cont-footer{
+        height: 300px;
+    }
+    .cont-left-footer{
+        width: 70%;
+        height: 70%;
+        border-right: 1px solid #fff;
+        margin: 0;
+    }
+    .cont-right-footer{
+        width: 30%;
+        margin: 0;
+    }
+    .cont-left-footer p, .cont-right-footer p{
+        margin-bottom: 10px;
+    }
+}
+
+
+
+/* Estilos de las páginas de emprendimientos */
+/* Estilos aplicados al subcontenedor que contiene la sección "Inicio" del emprendimiento */
+.emprendimiento #inicio .container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 0;
+}
+/* Estilos aplicados a otro subcontenedor que contiene la información de la sección "Inicio" del emprendimiento */
+.emprendimiento #inicio .container .row{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+/* Estilos aplicados a cada elemento contenedor dentro del subcontenedor "row" de la sección */
+.emprendimiento #inicio .container .row div{
+    width: 100%;
+    height: 100%;
+}
+/* Estilos aplicados a los contenedores de las imágenes de la sección */
+.emprendimiento .cont-imgs-inicio img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Estilos aplicados a los contenedores de los textos de la sección */
+.emprendimiento #inicio .cont-texto{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+/* Estilos aplicados a los textos de la sección */
+.emprendimiento #inicio .text-muted{
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+/* Estilos adicionales para configurar muestra correcta de los elementos de la sección en dimensiones de pantalla mayores a 992px */
+@media (min-width: 992px) {
+    .emprendimiento #inicio .container .row{
+        height: 600px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+    }
+    .emprendimiento #inicio .container .row div{
+        flex: 1;
+        justify-content: space-evenly;
+    }
+    .emprendimiento #inicio .container .row div:nth-child(1), .emprendimiento #inicio .container .row div:nth-child(3){
+        flex: 1.3;
+        padding: 0;
+    }
+    .emprendimiento #inicio .cont-texto{
+        padding: 0 50px;
+    }
+    .emprendimiento .cont-imgs-inicio img{
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+
+
+/* Estilos aplicados los videos de las paginas de emprendimientos */
+
+/* Estilos aplicados al contenedor de los videos */
+.emprendimiento .page-section#inicio {
+    padding-bottom: 6rem;
+}
+.emprendimiento #video .cont-video{
+    height: 500px;
+    width: 100%;
+}
+/* Estilos aplicados a los videos */
+.emprendimiento #video .cont-video .vid{
+    width: 100%;
+    height: 100%;
+}
+/* Estilos aplicados al contenedor del carrusel de imágenes con el texto correspondiente al lado */
+.emprendimiento #libro{
+    padding: 5rem 0;
+}
+/* Estilos adicionales para configurar muestra correcta de los elementos de la sección en dimensiones de pantalla mayores a 992px */
+@media (min-width: 992px) {
+    .emprendimiento #libro .cont-left-libro{
+        width: 50%;
+        max-width: 50%;
+    }
+    .emprendimiento #video .cont-left-libro{
+        width: 100%;
+        max-width: 100%;
+    }
+    .emprendimiento .cont-right-libro{
+        padding-left: 30px;
+    }
+}
+
+/* Estilos aplicados al contenedor del carrusel de imágenes de los emprendimientos específicos */
+.emprendimiento .cont-left-libro{
+    height: 480px;
+    width: 100%;
+}
+/* Estilos aplicados a los contenedores del texto al lado del carrusel de imágenes de los emprendimientos específicos */
+.emprendimiento .cont-text-right-libro{
+    display: flex;
+    flex-flow: column wrap;
+    height: 100%;
+    justify-content: center;
+}
+.emprendimiento .cont-text-adic-right-libro{
+    text-align: start;
+}
+/* Estilos aplicados al texto al lado del carrusel de imágenes de los emprendimientos específicos */
+.emprendimiento .cont-text-adic-right-libro .text-muted{
+    font-size: 15px;
+    line-height: 1.4;
+}
+/* Estilos aplicados al contenido cuando mida de ancho igual o más de 1400px  */
+@media (max-width: 1400px) {
+    .emprendimiento .cont-text-adic-right-libro .text-muted{
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
+/* Estilos aplicados al contenido cuando mida de ancho igual o más de 1200px  */
+@media (max-width: 1200px) {
+    .emprendimiento .cont-text-adic-right-libro .text-muted{
+        font-size: 13px;
+        line-height: 1.4;
+    }
+}
+/* Estilos aplicados al contenido cuando mida de ancho igual o más de 992px  */
+@media (max-width: 992px) {
+    .emprendimiento .cont-text-adic-right-libro .text-muted{
+        font-size: 17px;
+        line-height: 1.4;
+    }
+}
+
+
+/* Seccion con la información del emprendedor */
+/* Estilos aplicados al subcontenedor del contenido */
+.emprendimiento #info-emprendedor .row{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+/* Estilos aplicados a los subcontenedores del contenido */
+.emprendimiento .cont-left-info-emprendedor, .emprendimiento .cont-right-info-emprendedor {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+/* Estilos aplicados al subcontenedor izquierdo del contenido */
+.emprendimiento .cont-left-info-emprendedor{
+    height: 480px;
+    width: 100%;
+}
+/* Estilos aplicados al subcontenedor derecho del contenido */
+.emprendimiento .cont-right-info-emprendedor{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-content: center;
+}
+/* Estilos aplicados a las subdivisiones del subcontenedor derecho del contenido */
+.emprendimiento .cont-right-info-emprendedor h4, .emprendimiento .cont-right-info-emprendedor div, .emprendimiento .cont-right-info-emprendedor p{
+    margin: 20px 0;
+}
+
+/* Estilos adicionales para configurar muestra correcta de los elementos de la sección en dimensiones de pantalla mayores a 992px */
+@media (min-width: 992px) {
+    .emprendimiento .cont-left-info-emprendedor{
+        width: 60%;
+        max-width: 60%;
+    }
+    .emprendimiento .cont-right-info-emprendedor{
+        width: 40%;
+        max-width: 40%;
+    }
+    .emprendimiento .cont-right-info-emprendedor h4, .emprendimiento .cont-right-info-emprendedor div, .emprendimiento .cont-right-info-emprendedor p{
+        margin: 0;
+    }
+}
+
+/* Estilos aplicados al contenedor de la imagen izquierda mostrada con la información del emprendedor */
+.emprendimiento .cont-img-left-info-emprendedor{
+    width: 100%;
+    height: 100%;
+}
+/* Estilos aplicados al contenedor de la imagen mostrada junto con la información del emprendedor */
+.emprendimiento .cont-right-img-info-emprendedor{
+    width: 190px;
+    height: 190px;
+    margin: 0 auto;
+}
+.emprendimiento #cont-img-contact{
+    margin-left: calc(2% - 5px);
+    /* margin: 0 auto; */
+}
+/* Estilos aplicados a las imagenes mostradas en la sección de información del emprendedor */
+.emprendimiento .cont-img-left-info-emprendedor img, .emprendimiento .cont-right-img-info-emprendedor img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+/* Estilos aplicados a los textos de la información del emprendedor */
+.emprendimiento .cont-right-info-emprendedor .text-muted{
+    font-size: 13px;
+    width: 200px;
+    margin: 0 auto;
+}
+/* Estilos aplicados al texto mostrado con el número de teléfono del emprendedor */
+.emprendimiento .cont-right-info-emprendedor .cont-img-text-integrantes .text-muted{
+    font-size: 16px;
+}
+
+
